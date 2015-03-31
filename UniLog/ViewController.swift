@@ -9,6 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +20,32 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    //buttons action
 
+    @IBAction func twitterButtonTapped(sender: UIButton) {
+    }
 
+    @IBAction func instagramButtonTapped(sender: UIButton) {
+    }
+    
+    @IBAction func facebookButtonTapped(sender: UIButton) {
+    }
+    
+    @IBAction func youtubeButtonTapped(sender: UIButton) {
+    }
+    
+    @IBAction func googleplusButtonTapped(sender: UIButton) {
+    }
+    
+    @IBAction func githubButtonTapped(sender: UIButton) {
+    }
+    
+    @IBAction func linkedinButtonTapped(sender: UIButton) {
+    }
+    
+    @IBAction func foursquareButtonTapped(sender: UIButton) {
+    }
+    
 }
 
