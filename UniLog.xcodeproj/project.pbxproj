@@ -9,10 +9,13 @@
 /* Begin PBXBuildFile section */
 		65BECFD71ACAE20D00C1469C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BECFD61ACAE20D00C1469C /* AppDelegate.swift */; };
 		65BECFD91ACAE20D00C1469C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BECFD81ACAE20D00C1469C /* ViewController.swift */; };
-		65BECFDC1ACAE20D00C1469C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65BECFDA1ACAE20D00C1469C /* Main.storyboard */; };
 		65BECFDE1ACAE20D00C1469C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65BECFDD1ACAE20D00C1469C /* Images.xcassets */; };
 		65BECFE11ACAE20D00C1469C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65BECFDF1ACAE20D00C1469C /* LaunchScreen.xib */; };
 		65BECFED1ACAE20D00C1469C /* UniLogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BECFEC1ACAE20D00C1469C /* UniLogTests.swift */; };
+		E93EE2141ACAEFD600A90A7C /* Instagram.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93EE2131ACAEFD600A90A7C /* Instagram.swift */; };
+		E93EE2231ACAF0BF00A90A7C /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93EE2221ACAF0BF00A90A7C /* SwiftyJSON.swift */; };
+		E93EE2271ACAF14A00A90A7C /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = E93EE21B1ACAF01300A90A7C /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E93EE2291ACAF3C100A90A7C /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E93EE2281ACAF3C100A90A7C /* Login.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,19 +26,57 @@
 			remoteGlobalIDString = 65BECFD01ACAE20D00C1469C;
 			remoteInfo = UniLog;
 		};
+		E93EE21A1ACAF01300A90A7C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E93EE2151ACAF01300A90A7C /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
+			remoteInfo = Alamofire;
+		};
+		E93EE21C1ACAF01300A90A7C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E93EE2151ACAF01300A90A7C /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
+			remoteInfo = AlamofireTests;
+		};
+		E93EE2241ACAF0E600A90A7C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E93EE2151ACAF01300A90A7C /* Alamofire.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
+			remoteInfo = Alamofire;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E93EE2261ACAF13100A90A7C /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E93EE2271ACAF14A00A90A7C /* Alamofire.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		65BECFD11ACAE20D00C1469C /* UniLog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UniLog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65BECFD51ACAE20D00C1469C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65BECFD61ACAE20D00C1469C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65BECFD81ACAE20D00C1469C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		65BECFDB1ACAE20D00C1469C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		65BECFDD1ACAE20D00C1469C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		65BECFE01ACAE20D00C1469C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		65BECFE61ACAE20D00C1469C /* UniLogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UniLogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		65BECFEB1ACAE20D00C1469C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65BECFEC1ACAE20D00C1469C /* UniLogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniLogTests.swift; sourceTree = "<group>"; };
+		E93EE2131ACAEFD600A90A7C /* Instagram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Instagram.swift; sourceTree = "<group>"; };
+		E93EE2151ACAF01300A90A7C /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = "UniLog/Alamofire-master/Alamofire.xcodeproj"; sourceTree = "<group>"; };
+		E93EE2221ACAF0BF00A90A7C /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		E93EE2281ACAF3C100A90A7C /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +100,7 @@
 		65BECFC81ACAE20C00C1469C = {
 			isa = PBXGroup;
 			children = (
+				E93EE2151ACAF01300A90A7C /* Alamofire.xcodeproj */,
 				65BECFD31ACAE20D00C1469C /* UniLog */,
 				65BECFE91ACAE20D00C1469C /* UniLogTests */,
 				65BECFD21ACAE20D00C1469C /* Products */,
@@ -77,9 +119,8 @@
 		65BECFD31ACAE20D00C1469C /* UniLog */ = {
 			isa = PBXGroup;
 			children = (
+				E93EE2111ACAEF9300A90A7C /* Classes */,
 				65BECFD61ACAE20D00C1469C /* AppDelegate.swift */,
-				65BECFD81ACAE20D00C1469C /* ViewController.swift */,
-				65BECFDA1ACAE20D00C1469C /* Main.storyboard */,
 				65BECFDD1ACAE20D00C1469C /* Images.xcassets */,
 				65BECFDF1ACAE20D00C1469C /* LaunchScreen.xib */,
 				65BECFD41ACAE20D00C1469C /* Supporting Files */,
@@ -112,6 +153,66 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		E93EE2111ACAEF9300A90A7C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E93EE2211ACAF0AC00A90A7C /* DataHelper */,
+				E93EE2201ACAF05500A90A7C /* View */,
+				E93EE21F1ACAF03D00A90A7C /* Model */,
+				E93EE21E1ACAF02E00A90A7C /* ViewController */,
+				E93EE2121ACAEFA100A90A7C /* SocialConnection */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		E93EE2121ACAEFA100A90A7C /* SocialConnection */ = {
+			isa = PBXGroup;
+			children = (
+				E93EE2131ACAEFD600A90A7C /* Instagram.swift */,
+			);
+			path = SocialConnection;
+			sourceTree = "<group>";
+		};
+		E93EE2161ACAF01300A90A7C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E93EE21B1ACAF01300A90A7C /* Alamofire.framework */,
+				E93EE21D1ACAF01300A90A7C /* AlamofireTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E93EE21E1ACAF02E00A90A7C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				65BECFD81ACAE20D00C1469C /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		E93EE21F1ACAF03D00A90A7C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E93EE2201ACAF05500A90A7C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E93EE2281ACAF3C100A90A7C /* Login.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E93EE2211ACAF0AC00A90A7C /* DataHelper */ = {
+			isa = PBXGroup;
+			children = (
+				E93EE2221ACAF0BF00A90A7C /* SwiftyJSON.swift */,
+			);
+			path = DataHelper;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -122,10 +223,12 @@
 				65BECFCD1ACAE20D00C1469C /* Sources */,
 				65BECFCE1ACAE20D00C1469C /* Frameworks */,
 				65BECFCF1ACAE20D00C1469C /* Resources */,
+				E93EE2261ACAF13100A90A7C /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E93EE2251ACAF0E600A90A7C /* PBXTargetDependency */,
 			);
 			name = UniLog;
 			productName = UniLog;
@@ -179,6 +282,12 @@
 			mainGroup = 65BECFC81ACAE20C00C1469C;
 			productRefGroup = 65BECFD21ACAE20D00C1469C /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = E93EE2161ACAF01300A90A7C /* Products */;
+					ProjectRef = E93EE2151ACAF01300A90A7C /* Alamofire.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				65BECFD01ACAE20D00C1469C /* UniLog */,
@@ -187,14 +296,31 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		E93EE21B1ACAF01300A90A7C /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = E93EE21A1ACAF01300A90A7C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E93EE21D1ACAF01300A90A7C /* AlamofireTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AlamofireTests.xctest;
+			remoteRef = E93EE21C1ACAF01300A90A7C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		65BECFCF1ACAE20D00C1469C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65BECFDC1ACAE20D00C1469C /* Main.storyboard in Resources */,
 				65BECFE11ACAE20D00C1469C /* LaunchScreen.xib in Resources */,
 				65BECFDE1ACAE20D00C1469C /* Images.xcassets in Resources */,
+				E93EE2291ACAF3C100A90A7C /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,7 +339,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				65BECFD91ACAE20D00C1469C /* ViewController.swift in Sources */,
+				E93EE2141ACAEFD600A90A7C /* Instagram.swift in Sources */,
 				65BECFD71ACAE20D00C1469C /* AppDelegate.swift in Sources */,
+				E93EE2231ACAF0BF00A90A7C /* SwiftyJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,17 +361,14 @@
 			target = 65BECFD01ACAE20D00C1469C /* UniLog */;
 			targetProxy = 65BECFE71ACAE20D00C1469C /* PBXContainerItemProxy */;
 		};
+		E93EE2251ACAF0E600A90A7C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			targetProxy = E93EE2241ACAF0E600A90A7C /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		65BECFDA1ACAE20D00C1469C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				65BECFDB1ACAE20D00C1469C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		65BECFDF1ACAE20D00C1469C /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -407,6 +532,7 @@
 				65BECFF21ACAE20D00C1469C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		65BECFF31ACAE20D00C1469C /* Build configuration list for PBXNativeTarget "UniLogTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +541,7 @@
 				65BECFF51ACAE20D00C1469C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
