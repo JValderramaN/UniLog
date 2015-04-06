@@ -18,7 +18,8 @@ class ViewController: UIViewController, OAuthIODelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        /* Config modal for connect with OAuthIO */
         self.oauth_modal = OAuthIOModal(key: "J_-8OVQiQ3Jk80OYvbYKRn0TFL0", delegate: self)
     }
 
@@ -27,9 +28,11 @@ class ViewController: UIViewController, OAuthIODelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    //buttons action
-
+    /* Buttons
+        Action buttons, each social network have to own button
+    */
     @IBAction func twitterButtonTapped(sender: UIButton) {
+
         var options = NSMutableDictionary()
         options.setValue("true", forKey: "cache")
         self.oauth_modal?.showWithProvider(objectSocial.socialNet.objectForKey("Twitter") as String, options: options)
@@ -37,6 +40,7 @@ class ViewController: UIViewController, OAuthIODelegate {
     }
 
     @IBAction func instagramButtonTapped(sender: UIButton) {
+
         var options = NSMutableDictionary()
         options.setValue("true", forKey: "cache")
         self.oauth_modal?.showWithProvider(objectSocial.socialNet.objectForKey("Instagram") as String, options: options)
@@ -62,19 +66,31 @@ class ViewController: UIViewController, OAuthIODelegate {
     }
 
 
-    //oAuth
+    /* oAuth
+        Receive the answer of OAuthIO, it's going to save a token depending on the social network you connect to
+    */
     func didReceiveOAuthIOResponse(request: OAuthIORequest!) {
 
         var cred: NSDictionary = request.getCredentials()
-        println(cred.objectForKey("provider")!)
-        if cred.objectForKey("provider")! as String == objectSocial.socialNet.objectForKey("Instagram") as String {
-            objectSocial.accessToken = cred.objectForKey("access_token")! as String
-            println(cred.objectForKey("access_token")!)
-        }
 
-        if cred.objectForKey("provider")! as String == objectSocial.socialNet.objectForKey("Twitter") as String {
-            objectSocial.accessToken = cred.objectForKey("oauth_token")! as String
-            println(cred.objectForKey("oauth_token")!)
+        switch cred.objectForKey("provider")! as String {
+
+            case "twitter":
+
+                println("Twitter")
+                objectSocial.accessToken = cred.objectForKey("oauth_token")! as String
+                println(cred.objectForKey("oauth_token")!)
+
+            case "instagram":
+
+                println("Instagram")
+                objectSocial.accessToken = cred.objectForKey("access_token")! as String
+                println(cred.objectForKey("access_token")!)
+
+            default:
+
+            println("error")
+            
         }
 
         //println(cred.objectForKey("oauth_token_secret"))
