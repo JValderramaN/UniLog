@@ -9,7 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController, OAuthIODelegate {
-    
+
+    var objectSocial = SocialConnection()
 
     var oauth_modal: OAuthIOModal? = nil
     var request_object: OAuthIORequest? = nil
@@ -18,7 +19,7 @@ class ViewController: UIViewController, OAuthIODelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.oauth_modal = OAuthIOModal(key: "sny9pWwsI6LghavyM_hT7Oo2hOw", delegate: self)
+        self.oauth_modal = OAuthIOModal(key: "J_-8OVQiQ3Jk80OYvbYKRn0TFL0", delegate: self)
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,14 +30,16 @@ class ViewController: UIViewController, OAuthIODelegate {
     //buttons action
 
     @IBAction func twitterButtonTapped(sender: UIButton) {
-
+        var options = NSMutableDictionary()
+        options.setValue("true", forKey: "cache")
+        self.oauth_modal?.showWithProvider(objectSocial.socialNet.objectForKey("Twitter") as String, options: options)
 
     }
 
     @IBAction func instagramButtonTapped(sender: UIButton) {
         var options = NSMutableDictionary()
         options.setValue("true", forKey: "cache")
-        self.oauth_modal?.showWithProvider("instagram", options: options)
+        self.oauth_modal?.showWithProvider(objectSocial.socialNet.objectForKey("Instagram") as String, options: options)
 
     }
     
@@ -61,12 +64,24 @@ class ViewController: UIViewController, OAuthIODelegate {
 
     //oAuth
     func didReceiveOAuthIOResponse(request: OAuthIORequest!) {
+
         var cred: NSDictionary = request.getCredentials()
-        println(cred.objectForKey("access_token")!)
+        println(cred.objectForKey("provider")!)
+        if cred.objectForKey("provider")! as String == objectSocial.socialNet.objectForKey("Instagram") as String {
+            objectSocial.accessToken = cred.objectForKey("access_token")! as String
+            println(cred.objectForKey("access_token")!)
+        }
+
+        if cred.objectForKey("provider")! as String == objectSocial.socialNet.objectForKey("Twitter") as String {
+            objectSocial.accessToken = cred.objectForKey("oauth_token")! as String
+            println(cred.objectForKey("oauth_token")!)
+        }
+
         //println(cred.objectForKey("oauth_token_secret"))
-       // self.status_label.text = "Logged in with Twitter/Instagram"
+        // self.status_label.text = "Logged in with Twitter/Instagram"
         self.request_object = request
     }
+
 
     func didFailWithOAuthIOError(error: NSError!) {
         //self.status_label.text = "Could not login with Twitter/Instagram"

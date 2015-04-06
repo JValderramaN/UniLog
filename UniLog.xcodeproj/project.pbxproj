@@ -16,6 +16,7 @@
 		E93EE2231ACAF0BF00A90A7C /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93EE2221ACAF0BF00A90A7C /* SwiftyJSON.swift */; };
 		E93EE2271ACAF14A00A90A7C /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = E93EE21B1ACAF01300A90A7C /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E93EE2291ACAF3C100A90A7C /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E93EE2281ACAF3C100A90A7C /* Login.storyboard */; };
+		E94752451AD31E8600F13ACF /* SocialConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94752441AD31E8600F13ACF /* SocialConnection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		E93EE2221ACAF0BF00A90A7C /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		E93EE2281ACAF3C100A90A7C /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		E94752401AD31B9200F13ACF /* UniLog-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UniLog-Bridging-Header.h"; path = "../ViewController/UniLog-Bridging-Header.h"; sourceTree = "<group>"; };
+		E94752441AD31E8600F13ACF /* SocialConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SocialConnection.swift; path = UniLog/Classes/Model/SocialConnection.swift; sourceTree = SOURCE_ROOT; };
 		FDE1B5FDC078F48AB4F45832 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -183,16 +185,8 @@
 				E93EE2201ACAF05500A90A7C /* View */,
 				E93EE21F1ACAF03D00A90A7C /* Model */,
 				E93EE21E1ACAF02E00A90A7C /* ViewController */,
-				E93EE2121ACAEFA100A90A7C /* SocialConnection */,
 			);
 			path = Classes;
-			sourceTree = "<group>";
-		};
-		E93EE2121ACAEFA100A90A7C /* SocialConnection */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = SocialConnection;
 			sourceTree = "<group>";
 		};
 		E93EE2161ACAF01300A90A7C /* Products */ = {
@@ -215,6 +209,7 @@
 		E93EE21F1ACAF03D00A90A7C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E94752441AD31E8600F13ACF /* SocialConnection.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -397,6 +392,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				65BECFD91ACAE20D00C1469C /* ViewController.swift in Sources */,
+				E94752451AD31E8600F13ACF /* SocialConnection.swift in Sources */,
 				65BECFD71ACAE20D00C1469C /* AppDelegate.swift in Sources */,
 				E93EE2231ACAF0BF00A90A7C /* SwiftyJSON.swift in Sources */,
 			);
