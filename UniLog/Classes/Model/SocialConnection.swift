@@ -11,7 +11,7 @@ import Foundation
 
 class SocialConnection {
 
-    var socialNet : NSMutableDictionary = ["Twitter":"twitter", "Instagram":"instagram", "Foursquare":"foursquare", "Facebook":"facebook", "Youtube":"youtube", "GooglePlus":"googleplus", "GitHub":"gitHub", "LinkedIn":"linkedin"]
+    var socialNet : NSMutableDictionary = ["Twitter":"twitter", "Instagram":"instagram", "Foursquare":"foursquare", "Facebook":"facebook", "Youtube":"youtube", "GooglePlus":"google_plus", "LinkedIn":"linkedin"]
 
     var accessToken = String()
 

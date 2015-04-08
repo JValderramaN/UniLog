@@ -44,6 +44,10 @@ class ViewController: UIViewController, OAuthIODelegate {
     }
     
     @IBAction func facebookButtonTapped(sender: UIButton) {
+        var options = NSMutableDictionary()
+        options.setValue("true", forKey: "cache")
+        self.oauth_modal?.showWithProvider(objectSocial.socialNet.objectForKey("Facebook") as String, options: options)
+
     }
     
     @IBAction func youtubeButtonTapped(sender: UIButton) {
@@ -53,12 +57,16 @@ class ViewController: UIViewController, OAuthIODelegate {
     }
     
     @IBAction func googleplusButtonTapped(sender: UIButton) {
+        var options = NSMutableDictionary()
+        options.setValue("true", forKey: "cache")
+        self.oauth_modal?.showWithProvider(objectSocial.socialNet.objectForKey("GooglePlus") as String, options: options)
     }
     
-    @IBAction func githubButtonTapped(sender: UIButton) {
-    }
     
     @IBAction func linkedinButtonTapped(sender: UIButton) {
+        var options = NSMutableDictionary()
+        options.setValue("true", forKey: "cache")
+        self.oauth_modal?.showWithProvider(objectSocial.socialNet.objectForKey("LinkedIn") as String, options: options)
     }
     
     @IBAction func foursquareButtonTapped(sender: UIButton) {
@@ -100,10 +108,28 @@ class ViewController: UIViewController, OAuthIODelegate {
                 println("youtube")
                 objectSocial.accessToken = cred.objectForKey("access_token")! as String
                 println(cred.objectForKey("access_token")!)
+            
+            case "facebook":
+            
+                println("facebook")
+                objectSocial.accessToken = cred.objectForKey("access_token")! as String
+                println(cred.objectForKey("access_token")!)
 
+            case "google_plus":
+                
+                println("google_plus")
+                objectSocial.accessToken = cred.objectForKey("access_token")! as String
+                println(cred.objectForKey("access_token")!)
+            
+            case "linkedin":
+            
+                println("linkedin")
+                objectSocial.accessToken = cred.objectForKey("oauth_token")! as String
+                println(cred.objectForKey("oauth_token")!)
+            
             default:
 
-            println("error")
+                println("Not recognized provider")
             
         }
 

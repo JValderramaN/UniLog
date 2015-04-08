@@ -62,17 +62,8 @@
                                     <action selector="googleplusButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qfg-Sh-qeZ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vMq-WN-VlP">
-                                <rect key="frame" x="16" y="210" width="49" height="30"/>
-                                <state key="normal" title="GitHub">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="githubButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hNA-00-ucQ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pr1-fS-5Mz">
-                                <rect key="frame" x="16" y="248" width="59" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pr1-fS-5Mz">
+                                <rect key="frame" x="16" y="210" width="59" height="30"/>
                                 <state key="normal" title="LinkedIn">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -80,8 +71,8 @@
                                     <action selector="linkedinButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZMp-M6-efj"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ndi-EA-MIz">
-                                <rect key="frame" x="16" y="286" width="78" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ndi-EA-MIz">
+                                <rect key="frame" x="16" y="248" width="78" height="30"/>
                                 <state key="normal" title="Foursquare">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -98,16 +89,13 @@
                             <constraint firstItem="Ndi-EA-MIz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="En9-eB-SbO"/>
                             <constraint firstItem="Tsa-JZ-KAA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="PsD-Aa-KyQ"/>
                             <constraint firstItem="QJ4-CH-YRJ" firstAttribute="top" secondItem="7sN-jT-K2B" secondAttribute="bottom" constant="8" id="RAp-YY-6ii"/>
-                            <constraint firstItem="pr1-fS-5Mz" firstAttribute="top" secondItem="vMq-WN-VlP" secondAttribute="bottom" constant="8" id="SlC-Vd-bIf"/>
                             <constraint firstItem="QX3-oE-vBq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="YQb-4U-EPO"/>
                             <constraint firstItem="qoc-GI-w1B" firstAttribute="top" secondItem="QJ4-CH-YRJ" secondAttribute="bottom" constant="8" id="a7h-kO-1Tf"/>
                             <constraint firstItem="QX3-oE-vBq" firstAttribute="top" secondItem="Tsa-JZ-KAA" secondAttribute="bottom" constant="8" id="iOT-qY-nKJ"/>
                             <constraint firstItem="Tsa-JZ-KAA" firstAttribute="top" secondItem="qoc-GI-w1B" secondAttribute="bottom" constant="8" id="mGr-KQ-AYA"/>
                             <constraint firstItem="7sN-jT-K2B" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="puE-EE-uCR"/>
-                            <constraint firstItem="vMq-WN-VlP" firstAttribute="top" secondItem="QX3-oE-vBq" secondAttribute="bottom" constant="8" id="qe6-sh-BjA"/>
                             <constraint firstItem="QJ4-CH-YRJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="slW-Tw-uei"/>
                             <constraint firstItem="pr1-fS-5Mz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="tGg-uD-d3c"/>
-                            <constraint firstItem="vMq-WN-VlP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="vgl-bl-1OB"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
