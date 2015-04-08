@@ -32,25 +32,24 @@ class ViewController: UIViewController, OAuthIODelegate {
         Action buttons, each social network have to own button
     */
     @IBAction func twitterButtonTapped(sender: UIButton) {
-
         var options = NSMutableDictionary()
         options.setValue("true", forKey: "cache")
         self.oauth_modal?.showWithProvider(objectSocial.socialNet.objectForKey("Twitter") as String, options: options)
-
     }
 
     @IBAction func instagramButtonTapped(sender: UIButton) {
-
         var options = NSMutableDictionary()
         options.setValue("true", forKey: "cache")
         self.oauth_modal?.showWithProvider(objectSocial.socialNet.objectForKey("Instagram") as String, options: options)
-
     }
     
     @IBAction func facebookButtonTapped(sender: UIButton) {
     }
     
     @IBAction func youtubeButtonTapped(sender: UIButton) {
+        var options = NSMutableDictionary()
+        options.setValue("true", forKey: "cache")
+        self.oauth_modal?.showWithProvider(objectSocial.socialNet.objectForKey("Youtube") as String, options: options)
     }
     
     @IBAction func googleplusButtonTapped(sender: UIButton) {
@@ -63,6 +62,9 @@ class ViewController: UIViewController, OAuthIODelegate {
     }
     
     @IBAction func foursquareButtonTapped(sender: UIButton) {
+        var options = NSMutableDictionary()
+        options.setValue("true", forKey: "cache")
+        self.oauth_modal?.showWithProvider(objectSocial.socialNet.objectForKey("Foursquare") as String, options: options)
     }
 
 
@@ -86,6 +88,18 @@ class ViewController: UIViewController, OAuthIODelegate {
                 println("Instagram")
                 objectSocial.accessToken = cred.objectForKey("access_token")! as String
                 println(cred.objectForKey("access_token")!)
+            
+            case "foursquare":
+            
+                println("foursquare")
+                objectSocial.accessToken = cred.objectForKey("access_token")! as String
+                println(cred.objectForKey("access_token")!)
+            
+            case "youtube":
+            
+                println("youtube")
+                objectSocial.accessToken = cred.objectForKey("access_token")! as String
+                println(cred.objectForKey("access_token")!)
 
             default:
 
@@ -100,7 +114,11 @@ class ViewController: UIViewController, OAuthIODelegate {
 
 
     func didFailWithOAuthIOError(error: NSError!) {
-        //self.status_label.text = "Could not login with Twitter/Instagram"
+            var alert = UIAlertController(title: "Could not login !",
+                message: error.localizedDescription + " . ",//+error.localizedFailureReason!
+                preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "Ok!", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
     }
 
 
@@ -109,7 +127,6 @@ class ViewController: UIViewController, OAuthIODelegate {
     }
 
     func didAuthenticateServerSide(body: String!, andResponse response: NSURLResponse!) {
-
     }
 
     func didReceiveOAuthIOCode(code: String!) {

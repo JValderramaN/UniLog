@@ -59,7 +59,6 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="google:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rjG-HZ-McS"/>
                                     <action selector="googleplusButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qfg-Sh-qeZ"/>
                                 </connections>
                             </button>
